@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('../image/landing.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+}
+
+.container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo{
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 175px;
+}
+
+.navbar{
+    margin-left: auto;
+    margin-right: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+li{
+    
+    list-style: none;
+    display: inline;
+    margin-right: 50px;
+}
+
+.button {
+    padding: 10px 20px;
+    color: #FF8C00;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #FF8C00;
+    color: #fff;
+}
+
+.landing-h1{
+    margin-top: 150px;
+    margin-left: 175px;
+    color: #fff;
+    font-size: 60px;
+    width: 50%;
+}
+
+.foot{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffffc0;
+    color: #FF8C00;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    font-size: 16px;
+}
+
+.address{
+    margin-left: 175px;
+    margin-top: 10px;
+}
+
+.contact{
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 150px;
+}
