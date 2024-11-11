@@ -42,18 +42,18 @@
                         $username = $_POST['username'];
                         $password = $_POST['password'];
                 
-                        $sql = "SELECT * FROM user WHERE userName='$username' AND userPassword='$password'";
+                        $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
                         try {
                             $result = $con->query($sql);
                             $row = $result->fetch(PDO::FETCH_ASSOC);
                             $count = $result->rowCount();
                             if($count == 1){
-                                $_SESSION['userName'] = $row['userName'];
-                                $_SESSION['userID'] = $row['userID'];
+                                $_SESSION['userName'] = $row['username'];
+                                $_SESSION['userID'] = $row['id'];
                                 header("location: dashboard.php");
                             }else{
                 ?>
-                <p class="incorrect-pass">Incorrect username or password.</p>
+                                <p class="incorrect-pass">Incorrect username or password.</p>
                 <?php
                             }
                         } catch (PDOException $e) {
