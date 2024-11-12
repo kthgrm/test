@@ -50,7 +50,13 @@
                             if($count == 1){
                                 $_SESSION['userName'] = $row['username'];
                                 $_SESSION['userID'] = $row['id'];
-                                header("location: dashboard.php");
+                                if($row['type'] == 'admin'){
+                                    $_SESSION['admin_name'] = 'admin';
+                                    header("location: ./admin/admin.php");
+                                }else{
+                                    $_SESSION['type'] = 'user';
+                                    header("location: ./user/user.php");
+                                }
                             }else{
                 ?>
                                 <p class="incorrect-pass">Incorrect username or password.</p>
@@ -67,6 +73,5 @@
             <a href="index.html" class="back">Back to home</a>
         </div>
     </div>
-    
 </body>
 </html>
