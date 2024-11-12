@@ -67,9 +67,8 @@
                         }
                     }
                 ?>
-
-                <p class="forgot">Forgot password?</p>
             </div>
+            <p class="forgot">Forgot password?</p>
             <a href="index.html" class="back">Back to home</a>
         </div>
     </div>
