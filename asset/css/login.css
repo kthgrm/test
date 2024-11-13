@@ -30,6 +30,7 @@ img{
 }
 
 .container-image img{
+    height: 100%;
     border-radius: 40px 0px 0px 40px;
 }
 
@@ -102,7 +103,7 @@ img{
 
 .forgot{
     color: #333;
-    font-size: 2em;
+    font-size: 1em;
     margin-bottom: 1em;
     margin-left: 1.5em;
 }
