@@ -35,28 +35,28 @@
                                     $tenant = fetchAll('tenant');
                                     if (mysqli_num_rows($tenant) > 0) {
                                         foreach($tenant as $tenantItem) {
-                                            ?>
-                                                <tr>
-                                                    <td><?= $tenantItem['tenantID'] ?></td>
-                                                    <td><?= $tenantItem['fname'] ?></td>
-                                                    <td><?= $tenantItem['mname'] ?></td>
-                                                    <td><?= $tenantItem['lname'] ?></td>
-                                                    <td><?= $tenantItem['contact'] ?></td>
-                                                    <td><?= $tenantItem['email'] ?></td>
-                                                    <td><?= $tenantItem['unitID'] ?></td>
-                                                    <td>
-                                                        <a href="tenant-edit.php" class="btn btn-success btn-sm">Edit</a>
-                                                        <a href="tenant-delete.php" class="btn btn-danger btn-sm">Delete</a>
-                                                    </td>
-                                                </tr>
-                                            <?php
+                                ?>
+                                            <tr>
+                                                <td><?= $tenantItem['tenantID']; ?></td>
+                                                <td><?= $tenantItem['fname']; ?></td>
+                                                <td><?= $tenantItem['mname']; ?></td>
+                                                <td><?= $tenantItem['lname']; ?></td>
+                                                <td><?= $tenantItem['contact']; ?></td>
+                                                <td><?= $tenantItem['email']; ?></td>
+                                                <td><?= $tenantItem['unitID']; ?></td>
+                                                <td>
+                                                    <a href="tenant-edit.php?id=<?= $tenantItem['tenantID']; ?>" class="btn btn-success btn-sm">Edit</a>
+                                                    <a href="tenant-delete.php?id=<?= $tenantItem['tenantID']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this data?')">Delete</a>
+                                                </td>
+                                            </tr>
+                                <?php
                                         }
                                     }else{
-                                        ?>
+                                ?>
 
                                         <tr>
                                             <td colspan="7" class="text-center">No record found</td>
-
+                                        </tr>
                                         <?php
                                     }
                                 ?>

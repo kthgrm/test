@@ -19,7 +19,7 @@
                 header("location: ./user/user.php");
             }
         }else{
-            redirect("login.php", "Incorrect Username or Password.");
+            redirect("login.php", "Incorrect Username or Password.", 'error');
         }
         
     }
