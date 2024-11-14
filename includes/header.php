@@ -1,3 +1,13 @@
+<?php
+
+  require '../config/function.php';
+
+  if(!isset($_SESSION['userName']) && $_SESSION['userType'] != 'admin'){
+    header("location: ../index.html");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

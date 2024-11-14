@@ -1,11 +1,3 @@
-<?php
-    if(!isset($_SESSION)){
-        session_start();
-    }
-
-    include_once("../connection/connection.php");
-    $con = connect();
-?>
 <?php include('../includes/header.php') ?>
 
     <div class="row">

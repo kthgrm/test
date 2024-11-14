@@ -1,10 +1,7 @@
 <?php
-    if(!isset($_SESSION)){
-        session_start();
-    }
 
-    include_once("connection/connection.php");
-    $con = connect();
+    require './config/function.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +25,7 @@
                 <h1>Estrella Apartment</h1>
             </div>
             <div class="content-form">
-                <form action="" method="post">
+                <form action="code.php" method="post">
                     <label for="username">Username</label><br>
                     <input type="text" id="username" name="username" required>
                     <br>
@@ -37,36 +34,8 @@
                     <br>
                     <button type="submit" name="login">Login</button>
                 </form>
-                <?php
-                    if(isset($_POST['login'])){
-                        $username = $_POST['username'];
-                        $password = $_POST['password'];
-                
-                        $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
-                        try {
-                            $result = $con->query($sql);
-                            $row = $result->fetch(PDO::FETCH_ASSOC);
-                            $count = $result->rowCount();
-                            if($count == 1){
-                                $_SESSION['userName'] = $row['username'];
-                                $_SESSION['userID'] = $row['id'];
-                                if($row['type'] == 'admin'){
-                                    $_SESSION['admin_name'] = 'admin';
-                                    header("location: ./admin/admin.php");
-                                }else{
-                                    $_SESSION['type'] = 'user';
-                                    header("location: ./user/user.php");
-                                }
-                            }else{
-                ?>
-                                <p class="incorrect-pass">Incorrect username or password.</p>
-                <?php
-                            }
-                        } catch (PDOException $e) {
-                            echo "ERROR: Could not able to execute $sql. " . $e->getMessage();
-                        }
-                    }
-                ?>
+
+                <?= alertMessage(); ?>
             </div>
             <p class="forgot">Forgot password?</p>
             <a href="index.html" class="back">Back to home</a>
