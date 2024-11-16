@@ -45,9 +45,32 @@
                     <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa fa-book text-dark text-lg"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Other</span>
+                    <span class="nav-link-text ms-1">Lease</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'tables.html' ? 'active' : ''; ?>" href="../pages/tables.html">
+                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-book text-dark text-lg"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Payment</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'tables.html' ? 'active' : ''; ?>" href="../pages/tables.html">
+                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-book text-dark text-lg"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Maintenance Request</span>
                 </a>
             </li>
         </ul>
+    </div>
+    <div class="sidenav-footer mx-4 ">
+        <a class="btn btn-primary mt-3 w-100 d-flex align-items-center justify-content-center" href="../logout.php">
+            <i class="fa fa-sign-out me-2"></i> Logout
+        </a>
     </div>
 </aside>
